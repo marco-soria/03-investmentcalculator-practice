@@ -8,20 +8,22 @@ import { CurrencyPipe } from '@angular/common';
   styleUrl: './investment-results.component.css',
 })
 export class InvestmentResultsComponent {
-  // results = input<{
+  results = input<
+    {
+      year: number;
+      interest: number;
+      valueEndOfYear: number;
+      annualInvestment: number;
+      totalInterest: number;
+      totalAmountInvested: number;
+    }[]
+  >();
+  // @Input() results?: {
   //   year: number;
   //   interest: number;
   //   valueEndOfYear: number;
   //   annualInvestment: number;
   //   totalInterest: number;
   //   totalAmountInvested: number;
-  // }[]>()
-  @Input() results?: {
-    year: number;
-    interest: number;
-    valueEndOfYear: number;
-    annualInvestment: number;
-    totalInterest: number;
-    totalAmountInvested: number;
-  }[];
+  // }[];
 }
